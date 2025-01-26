@@ -162,7 +162,7 @@
 //                 >
 //                   <Box>
 //                     <StatNumber fontSize={"x-large"}>{voltage} V</StatNumber>
-//                     <StatHelpText>updated every 1min</StatHelpText>
+//                     <StatHelpText>updated every 7secs</StatHelpText>
 //                   </Box>
                   
 
@@ -189,7 +189,7 @@
 //                 >
 //                   <Box>
 //                     <StatNumber fontSize={"x-large"}>{current} A</StatNumber>
-//                     <StatHelpText>updated every 1min</StatHelpText>
+//                     <StatHelpText>updated every 7secs</StatHelpText>
 //                   </Box>
                   
 
@@ -216,7 +216,7 @@
 //                 >
 //                   <Box>
 //                     <StatNumber fontSize={"x-large"}>{active_power} W</StatNumber>
-//                     <StatHelpText>updated every 1min</StatHelpText>
+//                     <StatHelpText>updated every 7secs</StatHelpText>
 //                   </Box>
                   
 
@@ -243,7 +243,7 @@
 //                 >
 //                   <Box>
 //                     <StatNumber fontSize={"x-large"}>{active_energy} W</StatNumber>
-//                     <StatHelpText>updated every 1min</StatHelpText>
+//                     <StatHelpText>updated every 7secs</StatHelpText>
 //                   </Box>
                   
 
@@ -270,7 +270,7 @@
 //                 >
 //                   <Box>
 //                     <StatNumber fontSize={"x-large"}>{frequency}Hz</StatNumber>
-//                     <StatHelpText>updated every 1min</StatHelpText>
+//                     <StatHelpText>updated every 7secs</StatHelpText>
 //                   </Box>
                   
 
@@ -297,7 +297,7 @@
 //                 >
 //                   <Box>
 //                     <StatNumber fontSize={"x-large"}>{power_factor}</StatNumber>
-//                     <StatHelpText>updated every 1min</StatHelpText>
+//                     <StatHelpText>updated every 7secs</StatHelpText>
 //                   </Box>
                   
 
@@ -324,7 +324,7 @@
 //                 >
 //                   <Box>
 //                     <StatNumber fontSize={"x-large"}>₦ {active_energy * tariffRate}</StatNumber>
-//                     <StatHelpText>Updated every 1min</StatHelpText>
+//                     <StatHelpText>Updated every 7secs</StatHelpText>
 //                   </Box>
                   
 
@@ -572,7 +572,7 @@ const tariffChange = calculatePercentageChange(active_energy2*tariffRate, active
             label="Voltage"
             value={voltage}
             unit="V"
-            updateText="updated every 1min"
+            updateText="updated every 7secs"
             change={voltageChange}
           />
 
@@ -580,7 +580,7 @@ const tariffChange = calculatePercentageChange(active_energy2*tariffRate, active
             label="Current"
             value={current}
             unit="A"
-            updateText="updated every 1min"
+            updateText="updated every 7secs"
             change={currentChange}
           />
 
@@ -588,15 +588,15 @@ const tariffChange = calculatePercentageChange(active_energy2*tariffRate, active
             label="Active Power"
             value={active_power}
             unit="W"
-            updateText="updated every 1min"
+            updateText="updated every 7secs"
             change={active_powerChange}
           />
 
           <StatCard
             label="Active Energy"
             value={active_energy}
-            unit="W/hr"
-            updateText="updated every 1min"
+            unit="KW/hr"
+            updateText="updated every 7secs"
             change={active_energyChange}
           />
 
@@ -604,14 +604,14 @@ const tariffChange = calculatePercentageChange(active_energy2*tariffRate, active
             label="Frequency"
             value={frequency}
             unit="Hz"
-            updateText="updated every 1min"
+            updateText="updated every 7secs"
             change={frequencyChange}
           />
 
           <StatCard
             label="Power Factor"
             value={power_factor}
-            updateText="updated every 1min"
+            updateText="updated every 7secs"
             change={power_factorChange}
           />
 
@@ -619,7 +619,7 @@ const tariffChange = calculatePercentageChange(active_energy2*tariffRate, active
             label="Tariff"
             value={`₦ ${(active_energy * tariffRate).toLocaleString()}`}
             // value={`₦ ${(tariff).toLocaleString()}`}
-            updateText="Updated every 1min"
+            updateText="Updated every 7secs"
             change={tariffChange}
           />
         </SimpleGrid>
